@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://hope-foundation.netlify.app/sitemap.xml
+
+

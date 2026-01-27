@@ -1,0 +1,270 @@
+:root {
+    --primary: #27ae60;
+    --secondary: #2ecc71;
+    --accent: #f39c12;
+    --bg: #ffffff;
+    --text: #2c3e50;
+    --text-light: #7f8c8d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: var(--primary);
+    color: white;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(243,156,18,0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary);
+}
+
+.programs {
+    padding: 6rem 0;
+}
+
+.section-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.program-card {
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(39,174,96,0.2);
+}
+
+.program-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.program-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.impact {
+    padding: 6rem 0;
+    background: #f8f9fa;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.footer {
+    background: var(--text);
+    color: white;
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-content {
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    opacity: 0.8;
+}
+
+@media (max-width: 968px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+/* Poison samples gallery */
+.poison-gallery{margin:3rem 0}
+.poison-gallery .poison-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.poison-gallery figure{margin:0;padding:0}
+.poison-gallery img{width:100%;height:auto;display:block;border-radius:12px}
+.poison-gallery figcaption{margin-top:.6rem;line-height:1.5;opacity:.95}
+.poison-gallery .poison-meta{font-size:.9rem;opacity:.8}
